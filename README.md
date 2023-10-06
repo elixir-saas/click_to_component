@@ -1,11 +1,12 @@
 # ClickToComponent
 
-**TODO: Add description**
+Adds a click-to-component interaction, which when triggered opens the file and line number associated with the component in your favorite text editor.
+
+![Demo](./priv/demo.gif)
 
 ## Installation
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `click_to_component` to your list of dependencies in `mix.exs`:
+The package can be installed by adding `click_to_component` to your list of dependencies in `mix.exs`:
 
 ```elixir
 def deps do
@@ -15,7 +16,20 @@ def deps do
 end
 ```
 
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at <https://hexdocs.pm/click_to_component>.
+Documentation can be found at <https://hexdocs.pm/click_to_component>.
 
+## Configuration
+
+To enable in dev, add the following to `config/dev.exs`:
+
+```elixir
+config :click_to_component, enabled: true
+```
+
+You may also customize the command used to open your editor:
+
+```elixir
+# This is the default command.
+# Use `:path` to substitiute one of the args for the path, in the format `file:line`
+config :click_to_component, command: {"code", [".", "--goto", :path]}
+```
