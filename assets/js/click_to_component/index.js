@@ -1,7 +1,7 @@
 import { createMenu } from "./menu";
 import { findNearestComments } from "./dom";
 
-export const ClickToEditor = () => {
+export const ClickToComponent = () => {
   return {
     mounted() {
       this.menu = createMenu(this.onMenuClick.bind(this));
