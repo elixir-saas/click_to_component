@@ -2,6 +2,8 @@
 
 Adds a click-to-component interaction, which when triggered opens the file and line number associated with the component in your favorite text editor.
 
+The key binding to trigger the interaction is `Option+Click`.
+
 ![Demo](./priv/demo.gif)
 
 ## Installation
