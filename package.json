@@ -1,0 +1,25 @@
+{
+  "name": "click_to_component",
+  "version": "0.1.0",
+  "description": "Click-to-component functionality for LiveView apps.",
+  "license": "MIT",
+  "module": "./priv/static/click_to_component.esm.js",
+  "main": "./priv/static/click_to_component.cjs.js",
+  "unpkg": "./priv/static/click_to_component.min.js",
+  "jsdelivr": "./priv/static/click_to_component.min.js",
+  "exports": {
+    "import": "./priv/static/click_to_component.esm.js",
+    "require": "./priv/static/click_to_component.cjs.js"
+  },
+  "author": "Justin Tormey <justin@93software.com> (https://93software.com)",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/elixir-saas/click_to_component.git"
+  },
+  "files": [
+    "README.md",
+    "package.json",
+    "priv/static/*",
+    "assets/js/click_to_component/*"
+  ]
+}

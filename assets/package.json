@@ -1,0 +1,12 @@
+{
+  "name": "click_to_component",
+  "version": "0.1.0",
+  "description": "Click-to-component functionality for LiveView apps.",
+  "license": "MIT",
+  "repository": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}
