@@ -1,4 +1,4 @@
-# ClickToComponent
+# LiveView Click-to-Component
 
 Adds a click-to-component interaction, which when triggered opens the file and line number associated with the component in your favorite text editor.
 
