@@ -10,7 +10,7 @@ var LiveView = (() => {
   // js/click_to_component/index.js
   var click_to_component_exports = {};
   __export(click_to_component_exports, {
-    ClickToEditor: () => ClickToEditor
+    ClickToComponent: () => ClickToComponent
   });
 
   // js/click_to_component/menu.js
@@ -97,7 +97,7 @@ var LiveView = (() => {
   };
 
   // js/click_to_component/index.js
-  var ClickToEditor = () => {
+  var ClickToComponent = () => {
     return {
       mounted() {
         this.menu = createMenu(this.onMenuClick.bind(this));

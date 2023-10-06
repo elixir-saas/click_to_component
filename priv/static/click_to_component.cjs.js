@@ -8,7 +8,7 @@ var __export = (target, all) => {
 
 // js/click_to_component/index.js
 __export(exports, {
-  ClickToEditor: () => ClickToEditor
+  ClickToComponent: () => ClickToComponent
 });
 
 // js/click_to_component/menu.js
@@ -94,7 +94,7 @@ var findNearestComments = (currentEl) => {
 };
 
 // js/click_to_component/index.js
-var ClickToEditor = () => {
+var ClickToComponent = () => {
   return {
     mounted() {
       this.menu = createMenu(this.onMenuClick.bind(this));

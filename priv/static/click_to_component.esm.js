@@ -81,7 +81,7 @@ var findNearestComments = (currentEl) => {
 };
 
 // js/click_to_component/index.js
-var ClickToEditor = () => {
+var ClickToComponent = () => {
   return {
     mounted() {
       this.menu = createMenu(this.onMenuClick.bind(this));
@@ -104,6 +104,6 @@ var ClickToEditor = () => {
   };
 };
 export {
-  ClickToEditor
+  ClickToComponent
 };
 //# sourceMappingURL=click_to_component.esm.js.map
