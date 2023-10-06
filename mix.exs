@@ -8,6 +8,8 @@ defmodule ClickToComponent.MixProject do
       elixir: "~> 1.15",
       start_permanent: Mix.env() == :prod,
       name: "Click To Component",
+      description: "Click-to-component functionality for LiveView apps.",
+      package: package(),
       deps: deps(),
       aliases: aliases()
     ]
@@ -23,6 +25,17 @@ defmodule ClickToComponent.MixProject do
     [
       {:phoenix_live_view, "~> 0.20"},
       {:esbuild, "~> 0.2", only: :dev}
+    ]
+  end
+
+  defp package do
+    [
+      maintainers: ["Justin Tormey"],
+      licenses: ["MIT"],
+      links: %{
+        GitHub: "https://github.com/elixir-saas/click_to_component"
+      },
+      files: ~w(assets/js lib priv mix.exs package.json README.md)
     ]
   end
 
