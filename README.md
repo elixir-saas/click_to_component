@@ -63,3 +63,20 @@ Next, render the component code in your `lib/my_app_web/layouts/root.html.heex` 
 ```
 
 When `click_to_component` is enabled, this will render a JS hook that listens for clicks and renders the component menu on click.
+
+Finally, import and configure the `ClickToComponent` hook in `assets/js/app.js`:
+
+```js
+import { ClickToComponent } from "click_to_component";
+
+// Note the function call!
+const hooks = {
+  ClickToComponent: ClickToComponent(),
+};
+
+// Make sure `hooks` is configured in LiveSocket
+let liveSocket = new LiveSocket(socketUrl, Socket, {
+  hooks,
+  params: { _csrf_token: csrfToken },
+});
+```
