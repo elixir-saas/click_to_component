@@ -40,6 +40,7 @@ defmodule ClickToComponent do
       use Phoenix.LiveView,
         layout: {MyAppWeb.Layouts, :app}
 
+      require ClickToComponent
       ClickToComponent.install_hooks()
 
       # Rest of live_view quoted code...
