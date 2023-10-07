@@ -36,6 +36,12 @@ You may also customize the command used to open your editor:
 config :click_to_component, command: {"code", [".", "--goto", :path]}
 ```
 
+Make sure that you have LiveView >=0.20.0 installed in your project, and that you have enabled debug annotations:
+
+```elixir
+config :phoenix_live_view, debug_heex_annotations: true
+```
+
 ## Usage
 
 First, add the following code to your `lib/my_app_web.ex` module, in the quoted code in your `live_view` function:
