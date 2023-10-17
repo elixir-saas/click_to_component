@@ -27,20 +27,16 @@ defmodule ClickToComponent do
   </body>
   ```
   """
-  defmacro render(assigns) do
-    if @enabled? do
-      quote do
-        unquote(__MODULE__).Components.click_to_component(unquote(assigns))
-      end
-    else
-      quote do
-        ~H""
-      end
-    end
+  import Phoenix.Component, only: [sigil_H: 2], warn: false
+
+  if @enabled? do
+    def render(assigns), do: __MODULE__.Components.click_to_component(assigns)
+  else
+    def render(assigns), do: ~H""
   end
 
   @doc """
-  Installs the global `on_mount/1` LiveView hook for handling events.
+  Returns the global `on_mount/1` LiveView hook for handling events as quoted code.
 
   Add to your `lib/my_app_web.ex` file as follows:
 
@@ -50,21 +46,20 @@ defmodule ClickToComponent do
       use Phoenix.LiveView,
         layout: {MyAppWeb.Layouts, :app}
 
-      require ClickToComponent
-      ClickToComponent.install_hooks()
+      unquote(ClickToComponent.hooks())
 
       # Rest of live_view quoted code...
     end
   end
   ```
   """
-  defmacro install_hooks() do
-    import Phoenix.LiveView
-
-    if @enabled? do
+  if @enabled? do
+    def hooks() do
       quote do
         on_mount(unquote(__MODULE__.Hooks))
       end
     end
+  else
+    def hooks(), do: nil
   end
 end

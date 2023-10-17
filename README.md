@@ -52,9 +52,8 @@ def live_view(opts \\ []) do
     use Phoenix.LiveView,
       layout: {MyAppWeb.Layouts, :app}
 
-    # Add these 2 lines
-    require ClickToComponent
-    ClickToComponent.install_hooks()
+    # Add this line
+    unquote(ClickToComponent.hooks())
 
     # Rest of live_view quoted code...
   end
