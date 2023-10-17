@@ -15,6 +15,14 @@ defmodule ClickToComponent do
     """)
   end
 
+  if !@enabled? and Application.compile_env(:phoenix_live_view, :debug_heex_annotations) do
+    Logger.warning("""
+    It looks like :debug_heex_annotations is enabled, but ClickToComponent is not. To enable, add the following configuration in your `config/dev.exs` file:
+
+        config :click_to_component, enabled: true
+    """)
+  end
+
   @doc """
   Renders the ClickToComponent hook.
 
