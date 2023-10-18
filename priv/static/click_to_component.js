@@ -21,6 +21,7 @@ var LiveView = (() => {
       position: "fixed",
       top: "0px",
       left: "0px",
+      zIndex: 999999999,
       background: "white",
       border: "1px solid #e4e4e7",
       borderRadius: "8px",
