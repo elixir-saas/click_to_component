@@ -23,7 +23,7 @@ defmodule ClickToComponent.MixProject do
 
   defp deps do
     [
-      {:phoenix_live_view, "~> 0.20"},
+      {:phoenix_live_view, ">= 0.20.0"},
       {:esbuild, "~> 0.2", only: :dev},
       {:ex_doc, ">= 0.0.0", only: :dev, runtime: false}
     ]
