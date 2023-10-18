@@ -13,7 +13,7 @@ The package can be installed by adding `click_to_component` to your list of depe
 ```elixir
 def deps do
   [
-    {:click_to_component, "~> 0.2.1"}
+    {:click_to_component, "~> 0.2.2"}
   ]
 end
 ```
